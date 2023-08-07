@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useReducer } from "react";
-import { cartReducer } from "./Reducer";
+import { cartReducer, productReducer } from "./Reducer";
 
-const cart = createContext();
+const Cart = createContext();
 
 export const Context = ({ children }) => {
 	let products = [
@@ -73,12 +73,23 @@ export const Context = ({ children }) => {
 		cart: [],
 	});
 
+	const [productState, productDispatch] = useReducer(productReducer, {
+		byStock: false,
+		byFastDelivery: false,
+		byRating: 0,
+		searchQuery: "",
+	});
+
 	return (
-		<cart.Provider value={{ state, dispatch }}>{children}</cart.Provider>
+		<Cart.Provider
+			value={{ state, dispatch, productState, productDispatch }}
+		>
+			{children}
+		</Cart.Provider>
 	);
 };
 
 // export const Context;
 export const CartState = () => {
-	return useContext(cart);
+	return useContext(Cart);
 };
