@@ -1,6 +1,7 @@
 import React from "react";
 import {
 	Badge,
+	Button,
 	Container,
 	Dropdown,
 	FormControl,
@@ -53,19 +54,32 @@ function Header() {
 											<div className="cartItemDetail">
 												<span>{prod.name}</span>
 												<span>₹ {prod.price}</span>
+												<AiFillDelete
+													fontSize="20px"
+													style={{
+														cursor: "pointer",
+													}}
+													onClick={() =>
+														dispatch({
+															type: "REMOVE_FROM_CART",
+															payload: prod,
+														})
+													}
+												/>
 											</div>
-											<AiFillDelete
-												fontSize="20px"
-												style={{ cursor: "pointer" }}
-												onClick={() =>
-													dispatch({
-														type: "REMOVE_FROM_CART",
-														payload: prod,
-													})
-												}
-											/>
 										</span>
 									))}
+									<Link to="/cart">
+										<Button
+											style={{
+												width: "95%",
+												margin: "0 10px",
+												alignContent: "center",
+											}}
+										>
+											Go to cart
+										</Button>
+									</Link>
 								</>
 							) : (
 								<span style={{ padding: 10 }}>

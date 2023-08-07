@@ -6,7 +6,7 @@ const cart = createContext();
 export const Context = ({ children }) => {
 	let products = [
 		{
-			id: "gahgs",
+			id: "1",
 			name: "Nike Football Shoes",
 			price: 2000,
 
@@ -16,28 +16,28 @@ export const Context = ({ children }) => {
 			rating: 5,
 		},
 		{
-			id: "giufjdkyheikyfu",
+			id: "2",
 			name: "Vector-x studds",
 			price: 1200,
 
-			image: "images/images.jpg",
+			image: "images/acura-vector-x-black-green-original-imafvdarswsm7rg5.webp",
 			inStock: 3,
 			fastDelivery: false,
 			rating: 5,
 		},
 		{
-			id: "hdikloeqhfoi",
+			id: "3",
 			name: "Adidas Football Shoes",
 			price: 2200,
 
-			image: "images/acura-vector-x-black-green-original-imafvdarswsm7rg5.webp",
+			image: "images/images.jpg",
 			inStock: 0,
 			fastDelivery: true,
 			rating: 3,
 		},
 
 		{
-			id: "gpiorugjpu",
+			id: "4",
 			name: "Barcelona Home-kit",
 			price: 600,
 
@@ -47,7 +47,7 @@ export const Context = ({ children }) => {
 			rating: 4,
 		},
 		{
-			id: "gahgs",
+			id: "5",
 			name: "Real Madrid Away-kit",
 			price: 600,
 
@@ -57,7 +57,7 @@ export const Context = ({ children }) => {
 			rating: 4,
 		},
 		{
-			id: "gahgs",
+			id: "6",
 			name: "Cosco Football",
 			price: 500,
 
